@@ -1,4 +1,4 @@
-# [Проектная работа на GitHub Pages](https://zurabobo.github.io/mainrasha-test).
+# [Проектная работа на GitHub Pages](https://zurabobo.github.io/welbex-test-task).
 
 ## Тестовое задание web-программист (React.js)
 Нужно разработать таблицу в формате Single Page Application.
