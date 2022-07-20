@@ -1,0 +1,91 @@
+.dataTables_length,
+.dataTables_wrapper {
+  font-size: 1.6rem;
+}
+.dataTables_length select,
+.dataTables_length input,
+.dataTables_wrapper select,
+.dataTables_wrapper input {
+  background-color: #f9f9f9;
+  border: 1px solid #999;
+  border-radius: 4px;
+  height: 3rem;
+  line-height: 2;
+  font-size: 1.8rem;
+  color: #333;
+}
+.dataTables_length .dataTables_length,
+.dataTables_length .dataTables_filter,
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter {
+  margin-top: 30px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  display: inline-flex;
+}
+
+.paginate_button {
+  min-width: 4rem;
+  display: inline-block;
+  text-align: center;
+  padding: 1rem 1.6rem;
+  margin-top: -1rem;
+  border: 2px solid lightblue;
+}
+.paginate_button:not(.previous) {
+  border-left: none;
+}
+.paginate_button.previous {
+  border-radius: 8px 0 0 8px;
+  min-width: 7rem;
+}
+.paginate_button.next {
+  border-radius: 0 8px 8px 0;
+  min-width: 7rem;
+}
+.paginate_button:hover {
+  cursor: pointer;
+  background-color: #eee;
+  text-decoration: none;
+}
+
+.sort-button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  transition: opacity .3s ease;
+}
+
+.sort-button:hover {
+  opacity: .8;
+}
+
+@media screen and (max-width: 641px) {
+  .table > :not(caption) > * > * {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 612px) {
+  .table > :not(caption) > * > * {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 453px) {
+  .table > :not(caption) > * > * {
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .table > :not(caption) > * > * {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .table > :not(caption) > * > * {
+    font-size: 7px;
+  }
+}
