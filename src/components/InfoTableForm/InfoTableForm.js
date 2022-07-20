@@ -70,27 +70,16 @@ import { Button, Col, Form, Row } from "react-bootstrap";
 import { useFormValidation } from '../../hooks/useFormValidation';
 
 function InfoTableForm({ filterSubmit, onReset }) {
-  const [name, setName] = useState("");
-  const [law, setLaw] = useState("");
-  const [argument, setArgument] = useState("");
+  // const [name, setName] = useState("");
+  // const [law, setLaw] = useState("");
+  // const [argument, setArgument] = useState("");
 
   const {
     values,
-    errors,
     isValid,
     handleChange,
     resetForm
   } = useFormValidation({});
-
-//   function handleNameChange(evt) {
-//     setName(evt.target.value);
-//   }
-//   function handleLawChange(evt) {
-//     setLaw(evt.target.value);
-//   }
-//   function handleArgumentChange(evt) {
-//     setArgument(evt.target.value);
-//   }
 
   function onClearFilter() {
     resetForm();
@@ -135,7 +124,7 @@ function InfoTableForm({ filterSubmit, onReset }) {
       </Form.Group>
 	  </Col>
 	  </Row>
-	  <Button size="sm" variant="outline-primary" type="submit" disabled={!isValid}>
+	  <Button size="sm" variant="primary" type="submit" disabled={!isValid}>
         Отфильтровать
       </Button>
 	  <Button size="sm" variant="outline-secondary" type="reset" onClick={onClearFilter} disabled={!isValid}>

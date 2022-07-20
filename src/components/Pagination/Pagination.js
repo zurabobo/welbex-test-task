@@ -1,14 +1,10 @@
 import React from 'react';
-import './Paginator.css';
+import './Pagination.css';
 
-const Paginator = ({ currentPage, pageCount, onChoosePage }) => {
-	const pageLeft =
-		currentPage - 1 > 0 ? (currentPage - 2 > 0 ? currentPage - 2 : currentPage - 1) : 1;
+const Pagination = ({ currentPage, pageCount, onChoosePage }) => {
+	const pageLeft = currentPage - 1 > 0 ? (currentPage - 2 > 0 ? currentPage - 2 : currentPage - 1) : 1;
 
-	let pageRight =
-		currentPage - 1 > 0
-			? currentPage - 2 > 0 ? currentPage + 2 : currentPage + 3
-			: currentPage + 4;
+	let pageRight = currentPage - 1 > 0 ? currentPage - 2 > 0 ? currentPage + 2 : currentPage + 3 : currentPage + 4;
 
 	if (pageRight > pageCount) {
 		pageRight = pageCount;
@@ -40,4 +36,4 @@ const Paginator = ({ currentPage, pageCount, onChoosePage }) => {
 	);
 };
 
-export default Paginator;
+export default Pagination;

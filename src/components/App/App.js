@@ -1,24 +1,6 @@
-// import "./App.css";
-// import InfoTable from "../InfoTable/InfoTable";
-// import InfoTableForm from "../InfoTableForm/InfoTableForm";
-// import Paginator from "../Paginator/Paginator";
-
-// function App() {
-//   return (
-//     <div className="page">
-//       <InfoTableForm />
-//       <InfoTable />
-//       <Paginator />
-//     </div>
-//   );
-// }
-
-// export default App;
-
-
 import InfoTable from '../InfoTable/InfoTable.js';
 import InfoTableForm from '../InfoTableForm/InfoTableForm';
-import Paginator from '../Paginator/Paginator';
+import Pagination from '../Pagination/Pagination';
 import { data } from '../../utils/data';
 import './App.css';
 import { useState, useEffect } from 'react';
@@ -182,7 +164,7 @@ function App() {
 			<div className="page">
 				<InfoTableForm filterSubmit={onFilterSubmit} onReset={onResetHandle} />
 				<InfoTable data={renderData} onSort={handleSort} />
-				<Paginator
+				<Pagination
 					currentPage={pagesConfig.currentPage}
 					pageCount={pagesConfig.pageCount}
 					onChoosePage={onChoosePageHandler}

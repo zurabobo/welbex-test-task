@@ -70,5 +70,17 @@ export const data = [
 		points: 1,
 		name: 'Emma',
 		distance: 65
-	}
+	},
+	{
+		date: '12.08.2017',
+		points: 2,
+		name: 'Gabi',
+		distance: 33
+	},
+	{
+		date: '11.01.2000',
+		points: 1,
+		name: 'Lilu',
+		distance: 65
+	},
 ];

@@ -2,10 +2,10 @@
     margin-left: 6px;
 }
 
-.btn-outline-primary {
+.btn-primary {
     margin-left: 30px;
 }
-.btn-outline-primary:focus{
+.btn-primary:focus{
     outline: none;
 }
 

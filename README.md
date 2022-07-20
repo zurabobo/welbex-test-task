@@ -1,5 +1,4 @@
 # [Проектная работа на GitHub Pages](https://zurabobo.github.io/mainrasha-test).
-## [Ссылка на тестовое задание](https://faint-adasaurus-4bc.notion.site/web-React-js-22257203622947f8879c527bf8ed0f48).
 
 ## Тестовое задание web-программист (React.js)
 Нужно разработать таблицу в формате Single Page Application.

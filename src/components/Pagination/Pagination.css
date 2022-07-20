@@ -1,0 +1,30 @@
+.paginator {
+	padding: 20px 0 0;
+	display: flex;
+}
+
+.paginator__page {
+	color:#0F53FD;
+	width: 24px;
+	height: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	border: 1px solid #D6DBE0;
+	transition: all .2s ease-in-out;
+}
+
+.paginator__page:last-of-type {
+	border-radius: 0 4px 4px 0;
+}
+
+.paginator__page:first-of-type {
+	border-radius: 4px 0 0 4px;
+}
+
+.paginator__page_active {
+	color: #FFF;
+	background-color: #0F53FD;
+	border: 1px solid #0F53FD;
+}
