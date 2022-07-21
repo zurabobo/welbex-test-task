@@ -1,4 +1,19 @@
-# [Проектная работа на GitHub Pages](https://zurabobo.github.io/welbex-test-task).
+# [Проектная работа на GitHub Pages](https://zurabobo.github.io/welbex-test-task)
+
+## Инструкция по установке:
+
+Клонировать репозиторий:
+
+`
+git clone https://github.com/zurabobo/welbex-test-task.git
+`
+
+установить зависимости и запустить приложение в режиме разработки:
+
+```
+npm install
+npm start
+```
 
 ## Тестовое задание web-программист (React.js)
 Нужно разработать таблицу в формате Single Page Application.
