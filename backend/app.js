@@ -14,9 +14,9 @@ const db = knex({
 const app = express();
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-// CORS implemented so that we don't get errors when trying to access the server from a different server location
+
 app.use(cors());
-// GET: Fetch all movies from the database
+
 app.get('/', (req, res) => {
     db.select('*')
         .from('main')
