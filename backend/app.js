@@ -8,8 +8,7 @@ const db = knex({
         host: process.env.DATABASE_HOST,
         user: process.env.DATABASE_USERNAME,
         password: process.env.DATABASE_PASSWORD,
-        database: process.env.DATABASE,
-        uri: process.env.DATABASE_URI
+        database: process.env.DATABASE
     },
 });
 const app = express();
