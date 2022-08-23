@@ -5,23 +5,23 @@ const knex = require('knex');
 const pg = require('pg');
 var connectionString = "postgres://mbjbpngwbtmcxj:81a003beaf1c763b47e850f0d95d768efb15495cb0db256ce41237736a080ae5@ec2-34-199-68-114.compute-1.amazonaws.com:5432/dd8hrerjqrq03a"
 
-pg.connect(connectionString, function(err, client, done) {
-   client.query('SELECT * FROM main', function(err, result) {
-      done();
-      if(err) return console.error(err);
-      console.log(result.rows);
-   });
-});
-// const db = knex({
-//     client: 'pg',
-//     connection: process.env.DATABASE_URL,
-//     ssl: true,
-//     extra: {
-//       ssl: {
-//         rejectUnauthorized: false,
-//       },
-//     },
+// pg.connect(connectionString, function(err, client, done) {
+//    client.query('SELECT * FROM main', function(err, result) {
+//       done();
+//       if(err) return console.error(err);
+//       console.log(result.rows);
+//    });
 // });
+const db = knex({
+    client: 'pg',
+    connection: connectionString,
+    ssl: true,
+    extra: {
+      ssl: {
+        rejectUnauthorized: false,
+      },
+    },
+});
 // const db = knex({
 //     client: 'pg',
 //     connection: {
