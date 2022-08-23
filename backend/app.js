@@ -3,18 +3,12 @@ const express = require('express');
 const cors = require('cors');
 const knex = require('knex');
 const pg = require('pg');
-var connectionString = "postgres://mbjbpngwbtmcxj:81a003beaf1c763b47e850f0d95d768efb15495cb0db256ce41237736a080ae5@ec2-34-199-68-114.compute-1.amazonaws.com:5432/dd8hrerjqrq03a"
 
 
 const db = knex({
     client: 'pg',
-    connection: process.env.DATABASE_URL || connectionString,
-    ssl: true,
-    extra: {
-      ssl: {
-        rejectUnauthorized: false,
-      },
-    },
+    connection: process.env.DATABASE_URL,
+    searchPath: ['knex', 'public'],
 });
 // const db = knex({
 //     client: 'pg',
