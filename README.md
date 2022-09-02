@@ -1,4 +1,5 @@
-# [Проектная работа на GitHub Pages](https://zurabobo.github.io/welbex-test-task)
+# [Проектная работа на Netlify](https://welbex-testtask.netlify.app/)
+# [Серверная часть на Heroku](https://welbex-testtask.netlify.app/)
 
 ## Инструкция по установке:
 
