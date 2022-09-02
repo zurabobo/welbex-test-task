@@ -387,8 +387,8 @@ function App() {
 				appData.slice(
 					pagesConfig.currentPage === 1
 						? pagesConfig.currentPage - 1
-						: (pagesConfig.currentPage - 1),
-					pagesConfig.currentPage
+						: (pagesConfig.currentPage - 1) * 5,
+					pagesConfig.currentPage * 5
 				)
 			);
 		},
