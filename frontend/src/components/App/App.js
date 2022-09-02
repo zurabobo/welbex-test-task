@@ -240,13 +240,13 @@ function App() {
     }
     if (sortConfig.sortBox === "quantity") {
       sortConfig.sortDirection === "ASC"
-        ? setAppData([...appData.sort((a, b) => a.quantity - b.quantity)])
-        : setAppData([...appData.sort((a, b) => b.quantity - a.quantity)]);
+        ? setAppData([...renderData.sort((a, b) => a.quantity - b.quantity)])
+        : setAppData([...renderData.sort((a, b) => b.quantity - a.quantity)]);
     }
     if (sortConfig.sortBox === "distance") {
       sortConfig.sortDirection === "ASC"
-        ? setAppData([...appData.sort((a, b) => a.distance - b.distance)])
-        : setAppData([...appData.sort((a, b) => b.distance - a.distance)]);
+        ? setAppData([...renderData.sort((a, b) => a.distance - b.distance)])
+        : setAppData([...renderData.sort((a, b) => b.distance - a.distance)]);
     }
     if (
       sortConfig.filterBox &&
@@ -256,23 +256,23 @@ function App() {
       if (sortConfig.filterBox === "user_name") {
         if (sortConfig.filterLaw === "equal")
           setAppData([
-            ...appData.filter((e) => e.user_name === sortConfig.filterArgument),
+            ...renderData.filter((e) => e.user_name === sortConfig.filterArgument),
           ]);
         if (sortConfig.filterLaw === "contain")
           setAppData([
-            ...appData.filter((e) =>
+            ...renderData.filter((e) =>
               e.user_name.includes(sortConfig.filterArgument)
             ),
           ]);
         if (sortConfig.filterLaw === "greater")
           setAppData([
-            ...appData.filter(
+            ...renderData.filter(
               (e) => e.user_name.length > sortConfig.filterArgument
             ),
           ]);
         if (sortConfig.filterLaw === "less")
           setAppData([
-            ...appData.filter(
+            ...renderData.filter(
               (e) => e.user_name.length < sortConfig.filterArgument
             ),
           ]);
@@ -280,25 +280,25 @@ function App() {
       if (sortConfig.filterBox === "quantity") {
         if (sortConfig.filterLaw === "equal")
           setAppData([
-            ...appData.filter(
+            ...renderData.filter(
               (e) => e.quantity === Number(sortConfig.filterArgument)
             ),
           ]);
         if (sortConfig.filterLaw === "contain")
           setAppData([
-            ...appData.filter((e) =>
+            ...renderData.filter((e) =>
               e.quantity.toString().includes(sortConfig.filterArgument)
             ),
           ]);
         if (sortConfig.filterLaw === "greater")
           setAppData([
-            ...appData.filter(
+            ...renderData.filter(
               (e) => e.quantity > Number(sortConfig.filterArgument)
             ),
           ]);
         if (sortConfig.filterLaw === "less")
           setAppData([
-            ...appData.filter(
+            ...renderData.filter(
               (e) => e.quantity < Number(sortConfig.filterArgument)
             ),
           ]);
@@ -306,25 +306,25 @@ function App() {
       if (sortConfig.filterBox === "distance") {
         if (sortConfig.filterLaw === "equal")
           setAppData([
-            ...appData.filter(
+            ...renderData.filter(
               (e) => e.distance === Number(sortConfig.filterArgument)
             ),
           ]);
         if (sortConfig.filterLaw === "contain")
           setAppData([
-            ...appData.filter((e) =>
+            ...renderData.filter((e) =>
               e.distance.toString().includes(sortConfig.filterArgument)
             ),
           ]);
         if (sortConfig.filterLaw === "greater")
           setAppData([
-            ...appData.filter(
+            ...renderData.filter(
               (e) => e.distance > Number(sortConfig.filterArgument)
             ),
           ]);
         if (sortConfig.filterLaw === "less")
           setAppData([
-            ...appData.filter(
+            ...renderData.filter(
               (e) => e.distance < Number(sortConfig.filterArgument)
             ),
           ]);
