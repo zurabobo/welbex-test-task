@@ -232,10 +232,10 @@ function App() {
     if (sortConfig.sortBox === "user_name") {
       sortConfig.sortDirection === "ASC"
         ? setAppData([
-            ...appData.sort((a, b) => (a.user_name > b.user_name ? 1 : -1)),
+            ...renderData.sort((a, b) => (a.user_name > b.user_name ? 1 : -1)),
           ])
         : setAppData([
-            ...appData.sort((a, b) => (a.user_name < b.user_name ? 1 : -1)),
+            ...renderData.sort((a, b) => (a.user_name < b.user_name ? 1 : -1)),
           ]);
     }
     if (sortConfig.sortBox === "quantity") {
