@@ -1,4 +1,4 @@
-import { API_URL } from "./config";
+import { API_URL } from "./config"
 
 class Api {
   constructor({ API_URL, headers }) {
