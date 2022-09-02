@@ -7,12 +7,7 @@ const pg = require('pg');
 
 const db = knex({
     client: 'pg',
-    connection: {
-        host: process.env.DATABASE_HOST,
-        user: process.env.DATABASE_USERNAME,
-        password: process.env.DATABASE_PASSWORD,
-        database: process.env.DATABASE
-    },
+    connection: process.env.DATABASE_URL, 
     searchPath: ['knex', 'public'],
 });
 // const db = knex({
