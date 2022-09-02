@@ -231,22 +231,22 @@ function App() {
   useEffect(() => {
     if (sortConfig.sortBox === "user_name") {
       sortConfig.sortDirection === "ASC"
-        ? setAppData([
+        ? setRenderData([
             ...renderData.sort((a, b) => (a.user_name > b.user_name ? 1 : -1)),
           ])
-        : setAppData([
+        : setRenderData([
             ...renderData.sort((a, b) => (a.user_name < b.user_name ? 1 : -1)),
           ]);
     }
     if (sortConfig.sortBox === "quantity") {
       sortConfig.sortDirection === "ASC"
-        ? setAppData([...renderData.sort((a, b) => a.quantity - b.quantity)])
-        : setAppData([...renderData.sort((a, b) => b.quantity - a.quantity)]);
+        ? setRenderData([...renderData.sort((a, b) => a.quantity - b.quantity)])
+        : setRenderData([...renderData.sort((a, b) => b.quantity - a.quantity)]);
     }
     if (sortConfig.sortBox === "distance") {
       sortConfig.sortDirection === "ASC"
-        ? setAppData([...renderData.sort((a, b) => a.distance - b.distance)])
-        : setAppData([...renderData.sort((a, b) => b.distance - a.distance)]);
+        ? setRenderData([...renderData.sort((a, b) => a.distance - b.distance)])
+        : setRenderData([...renderData.sort((a, b) => b.distance - a.distance)]);
     }
     if (
       sortConfig.filterBox &&
