@@ -1,86 +1,73 @@
-export const data = [
+export const data =[
 	{
-		date: '12.03.2005',
-		points: 2,
-		name: 'Mia',
-		distance: 41
+	  "id": 1,
+	  "user_name": "Wendall Gripton",
+	  "quantity": "2",
+	  "distance": 100,
+	  "date_of_birth": "2022-01-26"
 	},
 	{
-		date: '12.11.2008',
-		points: 4,
-		name: 'Harper',
-		distance: 42
+	  "id": 2,
+	  "user_name": "samuel Mollitt",
+	  "quantity": "3",
+	  "distance": 60,
+	  "date_of_birth": null
 	},
 	{
-		date: '19.07.2022',
-		points: 3,
-		name: 'Zura',
-		distance: 11
+	  "id": 3,
+	  "user_name": "Ole Rogge",
+	  "quantity": "2",
+	  "distance": 50,
+	  "date_of_birth": "2021-06-23"
 	},
 	{
-		date: '22.08.2010',
-		points: 1,
-		name: 'Joan',
-		distance: 13
+	  "id": 4,
+	  "user_name": "Elwin Huyge",
+	  "quantity": 3,
+	  "distance": 34,
+	  "date_of_birth": "2021-06-07"
 	},
 	{
-		date: '1.09.2019',
-		points: 1,
-		name: 'David',
-		distance: 23
+	  "id": 5,
+	  "user_name": "Anthe Maybery",
+	  "quantity": "4",
+	  "distance": 31,
+	  "date_of_birth": "2021-07-05"
 	},
 	{
-		date: '13.12.2015',
-		points: 6,
-		name: 'John',
-		distance: 24
+	  "id": 6,
+	  "user_name": "Arny Amerighi",
+	  "quantity": "62",
+	  "distance": 35,
+	  "date_of_birth": "2021-03-09"
 	},
 	{
-		date: '2.04.2017',
-		points: 2,
-		name: 'Abigail',
-		distance: 15
+	  "id": 7,
+	  "user_name": "Lynnell Shimmans",
+	  "quantity": "23",
+	  "distance": 12,
+	  "date_of_birth": "2021-06-03"
 	},
 	{
-		date: '24.10.2016',
-		points: 4,
-		name: 'Sophia',
-		distance: 25
+	  "id": 8,
+	  "user_name": "Pierre Klug",
+	  "quantity": "12",
+	  "distance": 36,
+	  "date_of_birth": "2021-09-19"
 	},
 	{
-		date: '2.12.2012',
-		points: 3,
-		name: 'Stacey',
-		distance: 30
+	  "id": 9,
+	  "user_name": "Melantha Jakeway",
+	  "quantity": "67",
+	  "distance": 48,
+	  "date_of_birth": "2021-01-07"
 	},
 	{
-		date: '26.05.2006',
-		points: 3,
-		name: 'Ava',
-		distance: 35
-	},
-	{
-		date: '20.08.2002',
-		points: 2,
-		name: 'Olivia',
-		distance: 33
-	},
-	{
-		date: '19.02.2002',
-		points: 1,
-		name: 'Emma',
-		distance: 65
-	},
-	{
-		date: '12.08.2017',
-		points: 2,
-		name: 'Gabi',
-		distance: 33
-	},
-	{
-		date: '11.01.2000',
-		points: 1,
-		name: 'Lilu',
-		distance: 65
-	},
-];
+	  "id": 10,
+	  "user_name": "Jodi Nickless",
+	  "quantity": "67",
+	  "distance": 36,
+	  "date_of_birth": "2021-02-05"
+	}
+  ]
+  

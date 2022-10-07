@@ -5,12 +5,15 @@
 .btn-primary {
     margin-left: 30px;
 }
+
 .btn-primary:focus{
     outline: none;
 }
 
 .btn-outline-secondary:last-of-type {
     margin-left: 6px;
+    background-color: #efefef;
+    color: #adabc8;
 }
 
 .form-label {
@@ -19,4 +22,16 @@
 
 .form-control-sm {
     margin-left: 24px;
+}
+
+.btn.btn-outline-secondary:disabled{
+    border-color: #efefef;
+}
+
+.btn.btn-outline-secondary {
+    border-color: #efefef;
+}
+
+.btn.btn-outline-secondary:hover {
+   background-color: #ebe9e9;
 }

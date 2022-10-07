@@ -2,6 +2,10 @@
   padding: 7rem;
 }
 
+.info-title {
+  text-align: center;
+}
+
 @media screen and (max-width: 769px) {
   .page {
     padding: 3rem;
@@ -13,3 +17,5 @@
     padding: 1rem;
   }
 } ;
+
+

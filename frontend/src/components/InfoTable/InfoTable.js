@@ -95,7 +95,7 @@ function InfoTable({ data, onSort }) {
   }
 
   return (
-    <Table onClick={handleClick} striped bordered className="border-dark text-center p-3 mx-auto mt-5">
+    <Table onClick={handleClick} striped bordered className="avoe border-dark text-center p-3 mx-auto mt-5">
       <thead>
         <tr>
         <th>Дата</th>
@@ -104,7 +104,7 @@ function InfoTable({ data, onSort }) {
         <th>Расстояние <button className="sort-button" data-type="distance" onClick={() => onSort('distance')}>{getArrow(order.distance)}</button></th>
         </tr>
       </thead>
-      <tbody>
+      {/* <tbody>
       {data.map((user, i) => (
 					<tr key={i}>
 						<td>{user.date_of_birth}</td>
@@ -113,7 +113,7 @@ function InfoTable({ data, onSort }) {
 						<td>{user.distance}</td>
 					</tr>
 				))}
-      </tbody>
+      </tbody> */}
     </Table>
   );
 }
