@@ -43,4 +43,3 @@ const Pagination = ({ currentPage, pageCount, onChoosePage }) => {
 };
 
 export default Pagination;
-

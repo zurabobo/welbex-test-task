@@ -45,7 +45,6 @@ function App() {
 
   function onResetHandle() {
     setAppData([...appData]);
-    setPagesConfig({ ...pagesConfig, currentPage: 1 });
   }
 
   function onChoosePageHandler(page) {
@@ -84,24 +83,24 @@ function App() {
       if (sortConfig.filterBox === "user_name") {
         if (sortConfig.filterLaw === "equal")
           setRenderData([
-            ...appData.filter((e) => e.user_name === sortConfig.filterArgument),
+            ...renderData.filter((e) => e.user_name === sortConfig.filterArgument),
           ]);
         if (sortConfig.filterLaw === "contain")
           setRenderData([
-            ...appData.filter((e) =>
+            ...renderData.filter((e) =>
               e.user_name.includes(sortConfig.filterArgument)
             ),
           ]);
 
         if (sortConfig.filterLaw === "greater")
           setRenderData([
-            ...appData.filter(
+            ...renderData.filter(
               (e) => e.user_name.length > sortConfig.filterArgument
             ),
           ]);
         if (sortConfig.filterLaw === "less")
           setRenderData([
-            ...appData.filter(
+            ...renderData.filter(
               (e) => e.user_name.length < sortConfig.filterArgument
             ),
           ]);
@@ -109,25 +108,25 @@ function App() {
       if (sortConfig.filterBox === "quantity") {
         if (sortConfig.filterLaw === "equal")
           setRenderData([
-            ...appData.filter(
+            ...renderData.filter(
               (e) => e.quantity === Number(sortConfig.filterArgument)
             ),
           ]);
         if (sortConfig.filterLaw === "contain")
           setRenderData([
-            ...appData.filter((e) =>
+            ...renderData.filter((e) =>
               e.quantity.toString().includes(sortConfig.filterArgument)
             ),
           ]);
         if (sortConfig.filterLaw === "greater")
           setRenderData([
-            ...appData.filter(
+            ...renderData.filter(
               (e) => e.quantity > Number(sortConfig.filterArgument)
             ),
           ]);
         if (sortConfig.filterLaw === "less")
           setRenderData([
-            ...appData.filter(
+            ...renderData.filter(
               (e) => e.quantity < Number(sortConfig.filterArgument)
             ),
           ]);
@@ -135,25 +134,25 @@ function App() {
       if (sortConfig.filterBox === "distance") {
         if (sortConfig.filterLaw === "equal")
           setRenderData([
-            ...appData.filter(
+            ...renderData.filter(
               (e) => e.distance === Number(sortConfig.filterArgument)
             ),
           ]);
         if (sortConfig.filterLaw === "contain")
           setRenderData([
-            ...appData.filter((e) =>
+            ...renderData.filter((e) =>
               e.distance.toString().includes(sortConfig.filterArgument)
             ),
           ]);
         if (sortConfig.filterLaw === "greater")
           setRenderData([
-            ...appData.filter(
+            ...renderData.filter(
               (e) => e.distance > Number(sortConfig.filterArgument)
             ),
           ]);
         if (sortConfig.filterLaw === "less")
           setRenderData([
-            ...appData.filter(
+            ...renderData.filter(
               (e) => e.distance < Number(sortConfig.filterArgument)
             ),
           ]);
