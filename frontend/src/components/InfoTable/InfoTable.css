@@ -104,6 +104,12 @@ th.down {
   .table th.default {
     background-size: 15%;
   }
+  .table th.up {
+    background-size: 15%;
+  }
+  .table th.down {
+    background-size: 15%;
+  }
   .mt-5 {
     margin-top: 1.6rem !important;
   }
