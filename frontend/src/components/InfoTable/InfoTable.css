@@ -53,11 +53,36 @@
   cursor: pointer;
   border: none;
   background: transparent;
-  transition: opacity .3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .sort-button:hover {
-  opacity: .8;
+  opacity: 0.8;
+}
+
+.border-color {
+  border-color: #ced4da;
+}
+
+.table th {
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.table th.up {
+  background-image: url("../../images/up_arrow.png");
+}
+.table th.down {
+  background-image: url("../../images/down_arrow.png");
+}
+.table th.default {
+  background-image: url("../../images/default.png");
+}
+th.up,
+th.default,
+th.down {
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center right;
 }
 
 @media screen and (max-width: 641px) {
@@ -75,6 +100,15 @@
 @media screen and (max-width: 453px) {
   .table > :not(caption) > * > * {
     font-size: 9px;
+  }
+  .table th.default {
+    background-size: 15%;
+  }
+  .mt-5 {
+    margin-top: 1.6rem !important;
+  }
+  .table {
+    margin-bottom: 0.7rem;
   }
 }
 

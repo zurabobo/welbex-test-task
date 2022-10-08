@@ -13,15 +13,7 @@ const db = knex({
       },
     searchPath: ['knex', 'public'],
 });
-// const db = knex({
-//     client: 'pg',
-//     connection: {
-//         host: process.env.DATABASE_HOST,
-//         user: process.env.DATABASE_USERNAME,
-//         password: process.env.DATABASE_PASSWORD,
-//         database: process.env.DATABASE
-//     },
-// });
+
 const app = express();
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());

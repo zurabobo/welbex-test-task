@@ -19,7 +19,7 @@ class Api {
     }).then(this._getResData);
   }
 
-  getTableData() {
+  getAppData() {
     return Promise.all([this.getData()]);
 }
 

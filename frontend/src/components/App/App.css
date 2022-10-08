@@ -2,20 +2,14 @@
   padding: 7rem;
 }
 
-.info-title {
-  text-align: center;
-}
-
 @media screen and (max-width: 769px) {
   .page {
     padding: 3rem;
   }
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 610px) {
   .page {
     padding: 1rem;
   }
 } ;
-
-

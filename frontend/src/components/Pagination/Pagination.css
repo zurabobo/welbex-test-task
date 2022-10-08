@@ -1,4 +1,35 @@
 /* .paginator {
+	padding: 20px 0 0;
+	display: flex;
+}
+
+.paginator__page {
+	color:#0F53FD;
+	width: 24px;
+	height: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	border: 1px solid #D6DBE0;
+	transition: all .2s ease-in-out;
+}
+
+.paginator__page:last-of-type {
+	border-radius: 0 4px 4px 0;
+}
+
+.paginator__page:first-of-type {
+	border-radius: 4px 0 0 4px;
+}
+
+.paginator__page_active {
+	color: #FFF;
+	background-color: #0F53FD;
+	border: 1px solid #0F53FD;
+} */
+
+/* .paginator {
   padding: 20px 0 0;
   display: flex;
 }
@@ -149,29 +180,32 @@
 }
 
 .border-color {
-	border-color: #ced4da;
+  border-color: #ced4da;
 }
 
-.shimmer {
-  height: 40px;
-  background-image: linear-gradient(
-    90deg,
-    #eee 0%,
-    #eee 40%,
-    #ddd 50%,
-    #ddd 55%,
-    #eee 65%,
-    #eee 100%
-  );
-  background-size: 400%;
-  animation: shimmer 1500ms infinite;
-}
-
-@keyframes shimmer {
-  from {
-    background-position: 100% 100%;
+@media screen and (max-width: 769px) {
+  .pagination__item {
+    width: 40px;
+    height: 40px;
   }
-  to {
-    background-position: 0 0;
+}
+
+@media screen and (max-width: 610px) {
+  .pagination__item {
+    width: 34px;
+    height: 34px;
+  }
+  .pagination__item-span {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 451px) {
+  .pagination__item {
+    width: 25px;
+    height: 25px;
+  }
+  .pagination__item-span {
+    font-size: 0.74rem;
   }
 }
