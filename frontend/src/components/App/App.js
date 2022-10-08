@@ -5,6 +5,7 @@ import api from "../../utils/Api.js";
 import "./App.css";
 import { useState, useEffect } from "react";
 import Preloader from "../Preloader/Preloader";
+import { columns } from "../../utils/config";
 
 function App() {
   const [appData, setAppData] = useState([]);
@@ -21,13 +22,6 @@ function App() {
     currentPage: 1,
     pageCount: Math.ceil(appData.length / 5),
   });
-
-  const columns = [
-    { label: "Дата", accessor: "date_of_birth", sortable: false },
-    { label: "Название", accessor: "user_name", sortable: true },
-    { label: "Количество", accessor: "quantity", sortable: true },
-    { label: "Расстояние", accessor: "distance", sortable: true },
-  ];
 
   function handleSort(box) {
     if (sortConfig.sortBox === box) {
@@ -89,26 +83,26 @@ function App() {
       if (sortConfig.filterBox === "user_name") {
         if (sortConfig.filterLaw === "equal")
           setRenderData([
-            ...renderData.filter(
+            ...appData.filter(
               (e) => e.user_name === sortConfig.filterArgument
             ),
           ]);
         if (sortConfig.filterLaw === "contain")
           setRenderData([
-            ...renderData.filter((e) =>
+            ...appData.filter((e) =>
               e.user_name.includes(sortConfig.filterArgument)
             ),
           ]);
 
         if (sortConfig.filterLaw === "greater")
           setRenderData([
-            ...renderData.filter(
+            ...appData.filter(
               (e) => e.user_name.length > sortConfig.filterArgument
             ),
           ]);
         if (sortConfig.filterLaw === "less")
           setRenderData([
-            ...renderData.filter(
+            ...appData.filter(
               (e) => e.user_name.length < sortConfig.filterArgument
             ),
           ]);
@@ -116,25 +110,25 @@ function App() {
       if (sortConfig.filterBox === "quantity") {
         if (sortConfig.filterLaw === "equal")
           setRenderData([
-            ...renderData.filter(
+            ...appData.filter(
               (e) => e.quantity === Number(sortConfig.filterArgument)
             ),
           ]);
         if (sortConfig.filterLaw === "contain")
           setRenderData([
-            ...renderData.filter((e) =>
+            ...appData.filter((e) =>
               e.quantity.toString().includes(sortConfig.filterArgument)
             ),
           ]);
         if (sortConfig.filterLaw === "greater")
           setRenderData([
-            ...renderData.filter(
+            ...appData.filter(
               (e) => e.quantity > Number(sortConfig.filterArgument)
             ),
           ]);
         if (sortConfig.filterLaw === "less")
           setRenderData([
-            ...renderData.filter(
+            ...appData.filter(
               (e) => e.quantity < Number(sortConfig.filterArgument)
             ),
           ]);
@@ -142,25 +136,25 @@ function App() {
       if (sortConfig.filterBox === "distance") {
         if (sortConfig.filterLaw === "equal")
           setRenderData([
-            ...renderData.filter(
+            ...appData.filter(
               (e) => e.distance === Number(sortConfig.filterArgument)
             ),
           ]);
         if (sortConfig.filterLaw === "contain")
           setRenderData([
-            ...renderData.filter((e) =>
+            ...appData.filter((e) =>
               e.distance.toString().includes(sortConfig.filterArgument)
             ),
           ]);
         if (sortConfig.filterLaw === "greater")
           setRenderData([
-            ...renderData.filter(
+            ...appData.filter(
               (e) => e.distance > Number(sortConfig.filterArgument)
             ),
           ]);
         if (sortConfig.filterLaw === "less")
           setRenderData([
-            ...renderData.filter(
+            ...appData.filter(
               (e) => e.distance < Number(sortConfig.filterArgument)
             ),
           ]);
