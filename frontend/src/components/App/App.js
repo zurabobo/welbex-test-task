@@ -9,6 +9,7 @@ import { columns } from "../../utils/config";
 
 function App() {
   const [appData, setAppData] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
   const [sortConfig, setSortConfig] = useState({
     sortDirection: "ASC",
     sortBox: "user_name",
@@ -83,9 +84,7 @@ function App() {
       if (sortConfig.filterBox === "user_name") {
         if (sortConfig.filterLaw === "equal")
           setRenderData([
-            ...appData.filter(
-              (e) => e.user_name === sortConfig.filterArgument
-            ),
+            ...appData.filter((e) => e.user_name === sortConfig.filterArgument),
           ]);
         if (sortConfig.filterLaw === "contain")
           setRenderData([
@@ -170,6 +169,7 @@ function App() {
   }, [appData]);
 
   useEffect(() => {
+    setIsLoading(true);
     api
       .getAppData()
       .then(([data]) => {
@@ -178,6 +178,9 @@ function App() {
       })
       .catch((err) => {
         console.log(err);
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
   }, []);
 
@@ -195,18 +198,24 @@ function App() {
   return (
     <div className="page">
       <InfoTableForm filterSubmit={onFilterSubmit} onReset={onResetHandle} />
-      {appData.length > 0 ? (
-        <>
-          <InfoTable data={renderData} columns={columns} onSort={handleSort} />
-          <Pagination
-            currentPage={pagesConfig.currentPage}
-            pageCount={pagesConfig.pageCount}
-            onChoosePage={onChoosePageHandler}
-          />
-        </>
-      ) : (
-        <Preloader />
-      )}
+     <>
+     {isLoading ? (
+      <Preloader />
+     ) : (
+      <>
+      <InfoTable
+        data={renderData}
+        columns={columns}
+        onSort={handleSort}
+      />
+      <Pagination
+        currentPage={pagesConfig.currentPage}
+        pageCount={pagesConfig.pageCount}
+        onChoosePage={onChoosePageHandler}
+      />
+      </>
+     )}
+      </>
     </div>
   );
 }
