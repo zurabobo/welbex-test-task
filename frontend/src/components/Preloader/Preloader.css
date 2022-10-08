@@ -1,14 +1,5 @@
 .shimmer {
   height: 40px;
-  background-image: -o-linear-gradient(
-    left,
-    #eee 0%,
-    #eee 40%,
-    #ddd 50%,
-    #ddd 55%,
-    #eee 65%,
-    #eee 100%
-  );
   background-image: -webkit-gradient(
     linear,
     left top, right top,
@@ -18,6 +9,15 @@
     color-stop(55%, #ddd),
     color-stop(65%, #eee),
     to(#eee)
+  );
+  background-image: -o-linear-gradient(
+    left,
+    #eee 0%,
+    #eee 40%,
+    #ddd 50%,
+    #ddd 55%,
+    #eee 65%,
+    #eee 100%
   );
   background-image: linear-gradient(
     90deg,
@@ -31,21 +31,22 @@
   background-size: 400%;
   -webkit-animation: shimmer 1500ms infinite;
           animation: shimmer 1500ms infinite;
+}
+
+@-webkit-keyframes shimmer {
+  from {
+    background-position: 100% 100%;
   }
-  
-  @-webkit-keyframes shimmer {
-    from {
-      background-position: 100% 100%;
-    }
-    to {
-      background-position: 0 0;
-    }
+  to {
+    background-position: 0 0;
   }
+}
+
 @keyframes shimmer {
-    from {
-      background-position: 100% 100%;
-    }
-    to {
-      background-position: 0 0;
-    }
+  from {
+    background-position: 100% 100%;
   }
+  to {
+    background-position: 0 0;
+  }
+}
