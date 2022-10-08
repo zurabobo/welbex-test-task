@@ -1,10 +1,13 @@
 .pagination {
+  display: -ms-grid;
   display: grid;
   gap: 3px;
   width: 70%;
   margin: 0 auto;
   grid-auto-flow: column;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .pagination__item {
@@ -16,11 +19,15 @@
   width: 45px;
   position: relative;
   cursor: pointer;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#efefef), to(#efefef));
+  background-image: -o-linear-gradient(#efefef, #efefef);
   background-image: linear-gradient(#efefef, #efefef);
   background-repeat: no-repeat;
   background-size: 0% 45px;
   background-position-x: right;
   background-position-y: bottom;
+  -webkit-transition: background-size 250ms;
+  -o-transition: background-size 250ms;
   transition: background-size 250ms;
 }
 
@@ -58,7 +65,9 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .pagination__arrow-btn {
@@ -71,11 +80,15 @@
   border-radius: 4px;
   color: #acaaca;
   cursor: pointer;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff));
+  background-image: -o-linear-gradient(#fff, #fff);
   background-image: linear-gradient(#fff, #fff);
   background-repeat: no-repeat;
   background-size: 0% 45px;
   background-position-x: right;
   background-position-y: bottom;
+  -webkit-transition: background-size 250ms;
+  -o-transition: background-size 250ms;
   transition: background-size 250ms;
 }
 
