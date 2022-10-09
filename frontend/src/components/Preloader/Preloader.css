@@ -3,30 +3,30 @@
   background-image: -webkit-gradient(
     linear,
     left top, right top,
-    from(#eee),
-    color-stop(40%, #eee),
+    from(#fff),
+    color-stop(40%, #fff),
     color-stop(50%, #ddd),
     color-stop(55%, #ddd),
-    color-stop(65%, #eee),
-    to(#eee)
+    color-stop(65%, #fff),
+    to(#fff)
   );
   background-image: -o-linear-gradient(
     left,
-    #eee 0%,
-    #eee 40%,
+    #fff 0%,
+    #fff 40%,
     #ddd 50%,
     #ddd 55%,
-    #eee 65%,
-    #eee 100%
+    #fff 65%,
+    #fff 100%
   );
   background-image: linear-gradient(
     90deg,
-    #eee 0%,
-    #eee 40%,
+    #fff 0%,
+    #fff 40%,
     #ddd 50%,
     #ddd 55%,
-    #eee 65%,
-    #eee 100%
+    #fff 65%,
+    #fff 100%
   );
   background-size: 400%;
   -webkit-animation: shimmer 1500ms infinite;
