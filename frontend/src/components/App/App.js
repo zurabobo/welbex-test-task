@@ -19,7 +19,6 @@ function App() {
 
   const [pagesConfig, setPagesConfig] = useState({
     currentPage: 1,
-    pageCount: Math.ceil(appData.length / 5),
   });
 
   const handleSort = (sortField, sortOrder) => {
@@ -144,13 +143,6 @@ function App() {
   }, [sortConfig]);
 
   useEffect(() => {
-    setPagesConfig({
-      ...pagesConfig,
-      pageCount: Math.ceil(appData.length / 5),
-    });
-  }, [appData]);
-
-  useEffect(() => {
     setIsLoading(true);
     tableApi
       .getAppData()
@@ -166,7 +158,7 @@ function App() {
       });
   }, []);
 
-  useEffect(() => {
+   useEffect(() => {
     setRenderData(
       appData.slice(
         pagesConfig.currentPage === 1
@@ -191,8 +183,8 @@ function App() {
               onSort={handleSort}
             />
             <Pagination
+            data={appData}
               currentPage={pagesConfig.currentPage}
-              pageCount={pagesConfig.pageCount}
               onChoosePage={onChoosePageHandler}
             />
           </>

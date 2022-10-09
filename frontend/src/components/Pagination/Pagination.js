@@ -1,27 +1,11 @@
 import React from "react";
 import "./Pagination.css";
 
-const Pagination = ({ currentPage, pageCount, onChoosePage }) => {
-  const pageLeft =
-    currentPage - 1 > 0
-      ? currentPage - 2 > 0
-        ? currentPage - 2
-        : currentPage - 1
-      : 1;
-
-  let pageRight =
-    currentPage - 1 > 0
-      ? currentPage - 2 > 0
-        ? currentPage + 2
-        : currentPage + 3
-      : currentPage + 4;
-
-  if (pageRight > pageCount) {
-    pageRight = pageCount;
-  }
-
+const Pagination = ({ data, currentPage, onChoosePage }) => {
+  const [pageCount] = React.useState(Math.ceil(data.length / 5));
+  
   const pages = [];
-  for (let i = pageLeft; i <= pageRight; i++) {
+  for (let i = 1; i <= pageCount; i++) {
     pages.push(i);
   }
 
@@ -43,3 +27,4 @@ const Pagination = ({ currentPage, pageCount, onChoosePage }) => {
 };
 
 export default Pagination;
+
