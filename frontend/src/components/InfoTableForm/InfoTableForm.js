@@ -81,7 +81,6 @@ function InfoTableForm({ filterSubmit, onReset }) {
         variant="outline-secondary"
         type="reset"
         onClick={onClearFilter}
-        disabled={!isValid}
       >
         Сброс
       </Button>

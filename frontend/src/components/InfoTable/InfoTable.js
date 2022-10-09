@@ -23,18 +23,18 @@ function InfoTable({ data, columns, onSort }) {
       <thead>
         <tr>
           {columns.map(({ label, accessor, sortable }) => {
-            const clName = sortable
+            const arrowClassName = sortable
               ? sortField === accessor && order === "asc"
-                ? "up"
+                ? "arrow-up"
                 : sortField === accessor && order === "desc"
-                ? "down"
-                : "default"
+                ? "arrow-down"
+                : "arrow-default"
               : "";
             return (
               <th
                 key={accessor}
                 onClick={sortable ? () => handleSortingChange(accessor) : null}
-                className={clName}
+                className={arrowClassName}
               >
                 {label}
               </th>

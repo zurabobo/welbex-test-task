@@ -1,8 +1,8 @@
-import { API_URL } from "./config"
+import { TABLE_API_URL } from "./config"
 
-class Api {
-  constructor({ API_URL, headers }) {
-    this._API_URL = API_URL;
+class TableApi {
+  constructor({ TABLE_API_URL, headers }) {
+    this._TABLE_API_URL = TABLE_API_URL;
     this._headers = headers;
   }
 
@@ -14,7 +14,7 @@ class Api {
   }
 
   getData() {
-    return fetch(`${this._API_URL}`, {
+    return fetch(`${this._TABLE_API_URL}`, {
       headers: this._headers,
     }).then(this._getResData);
   }
@@ -26,11 +26,11 @@ class Api {
 
 }
 
-const api = new Api({
-  API_URL,
+const tableApi = new TableApi({
+  TABLE_API_URL,
   headers: {
     'Content-Type': 'application/json',
   },
 });
 
-export default api;
+export default tableApi;
