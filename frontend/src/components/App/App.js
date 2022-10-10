@@ -10,18 +10,19 @@ import { columns } from "../../utils/config";
 function App() {
   const [appData, setAppData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [isNotSorted, setIsNotSorted] = useState(false);
   const [sortConfig, setSortConfig] = useState({
     filterBox: undefined,
     filterLaw: undefined,
     filterArgument: undefined,
   });
   const [renderData, setRenderData] = useState(appData);
-
   const [pagesConfig, setPagesConfig] = useState({
     currentPage: 1,
   });
 
   const handleSort = (sortField, sortOrder) => {
+    setIsNotSorted(false);
     if (sortField) {
       const sorted = [...renderData].sort((a, b) => {
         if (a[sortField] === null) return 1;
@@ -38,6 +39,7 @@ function App() {
   };
 
   function onFilterSubmit(config) {
+    setIsNotSorted(true);
     setSortConfig({
       ...sortConfig,
       filterBox: config.name,
@@ -48,6 +50,7 @@ function App() {
 
   function onResetHandle() {
     setAppData([...appData]);
+    setIsNotSorted(true);
   }
 
   function onChoosePageHandler(page) {
@@ -158,7 +161,7 @@ function App() {
       });
   }, []);
 
-   useEffect(() => {
+  useEffect(() => {
     setRenderData(
       appData.slice(
         pagesConfig.currentPage === 1
@@ -181,9 +184,10 @@ function App() {
               data={renderData}
               columns={columns}
               onSort={handleSort}
+              isNotSorted={isNotSorted}
             />
             <Pagination
-            data={appData}
+              data={appData}
               currentPage={pagesConfig.currentPage}
               onChoosePage={onChoosePageHandler}
             />

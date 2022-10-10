@@ -2,7 +2,7 @@ import "./InfoTable.css";
 import { Table as BootstrapTable } from "react-bootstrap";
 import React, { useState } from "react";
 
-function InfoTable({ data, columns, onSort }) {
+function InfoTable({ data, columns, onSort, isNotSorted }) {
   const [sortField, setSortField] = useState("");
   const [order, setOrder] = useState("asc");
 
@@ -34,7 +34,9 @@ function InfoTable({ data, columns, onSort }) {
               <th
                 key={accessor}
                 onClick={sortable ? () => handleSortingChange(accessor) : null}
-                className={arrowClassName}
+                className={
+                  isNotSorted && sortable ? "arrow-default" : arrowClassName
+                }
               >
                 {label}
               </th>
