@@ -1,4 +1,4 @@
-import InfoTable from "../InfoTable/InfoTable.js";
+import Table from "../Table/Table.js";
 import InfoTableForm from "../InfoTableForm/InfoTableForm";
 import Pagination from "../Pagination/Pagination";
 import tableApi from "../../utils/TableApi.js";
@@ -180,7 +180,7 @@ function App() {
           <Preloader />
         ) : (
           <>
-            <InfoTable
+            <Table
               data={renderData}
               columns={columns}
               onSort={handleSort}

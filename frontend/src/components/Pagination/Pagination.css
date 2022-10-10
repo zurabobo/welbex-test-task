@@ -50,18 +50,6 @@
 }
 }
 
-.pagination__item-dots {
-  color: #acaaca;
-  background: transparent;
-  border: 1px solid #efefef;
-  border-radius: 4px;
-  padding: 0;
-  height: 45px;
-  width: 45px;
-  position: relative;
-  pointer-events: none;
-}
-
 .pagination__item-span {
   color: #acaaca;
   position: absolute;

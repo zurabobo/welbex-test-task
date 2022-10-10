@@ -1,64 +1,23 @@
 .shimmer {
-  height: 41px;
-  background-image: -webkit-gradient(
-    linear,
-    left top, right top,
-    from(#fff),
-    color-stop(40%, #fff),
-    color-stop(50%, #ddd),
-    color-stop(55%, #ddd),
-    color-stop(65%, #fff),
-    to(#fff)
-  );
-  background-image: -o-linear-gradient(
-    left,
-    #fff 0%,
-    #fff 40%,
-    #ddd 50%,
-    #ddd 55%,
-    #fff 65%,
-    #fff 100%
-  );
-  background-image: linear-gradient(
-    90deg,
-    #fff 0%,
-    #fff 40%,
-    #ddd 50%,
-    #ddd 55%,
-    #fff 65%,
-    #fff 100%
-  );
-  background-size: 400%;
-  -webkit-animation: shimmer 1500ms infinite;
-          animation: shimmer 1500ms infinite;
-}
-
-@-webkit-keyframes shimmer {
-  from {
-    background-position: 100% 100%;
+    height: 40px;
+    background-image: linear-gradient(
+      90deg,
+      #eee 0%,
+      #eee 40%,
+      #ddd 50%,
+      #ddd 55%,
+      #eee 65%,
+      #eee 100%
+    );
+    background-size: 400%;
+    animation: shimmer 1500ms infinite;
   }
-  to {
-    background-position: 0 0;
+  
+  @keyframes shimmer {
+    from {
+      background-position: 100% 100%;
+    }
+    to {
+      background-position: 0 0;
+    }
   }
-}
-
-@keyframes shimmer {
-  from {
-    background-position: 100% 100%;
-  }
-  to {
-    background-position: 0 0;
-  }
-}
-
-@media screen and (max-width: 451px) {
-  .shimmer {
-    height: 30px;
-  }
-}
-
-@media screen and (max-width: 321px) {
-  .shimmer {
-    height: 27px;
-  }
-}

@@ -53,37 +53,15 @@
   cursor: pointer;
   border: none;
   background: transparent;
-  transition: opacity 0.3s ease;
+  transition: opacity .3s ease;
 }
 
 .sort-button:hover {
-  opacity: 0.8;
+  opacity: .8;
 }
 
 .border-color {
-  border-color: #ced4da;
-}
-
-.table th {
-  border-bottom: 1px solid #1a1a1a;
-}
-
-.table th.arrow-up {
-  background-image: url("../../images/up_arrow.png");
-}
-.table th.arrow-down {
-  background-image: url("../../images/down_arrow.png");
-}
-.table th.arrow-default {
-  background-image: url("../../images/default.png");
-}
-
-th.arrow-up,
-th.arrow-default,
-th.arrow-down {
-  cursor: pointer;
-  background-repeat: no-repeat;
-  background-position: center right;
+	border-color: #ced4da;
 }
 
 @media screen and (max-width: 641px) {
@@ -95,38 +73,5 @@ th.arrow-down {
 @media screen and (max-width: 612px) {
   .table > :not(caption) > * > * {
     font-size: 10px;
-  }
-}
-
-@media screen and (max-width: 453px) {
-  .table > :not(caption) > * > * {
-    font-size: 9px;
-  }
-  .table th.arrow-default {
-    background-size: 15%;
-  }
-  .table th.arrow-up {
-    background-size: 15%;
-  }
-  .table th.arrow-down {
-    background-size: 15%;
-  }
-  .mt-5 {
-    margin-top: 1.6rem !important;
-  }
-  .table {
-    margin-bottom: 0.7rem;
-  }
-}
-
-@media screen and (max-width: 376px) {
-  .table > :not(caption) > * > * {
-    font-size: 8px;
-  }
-}
-
-@media screen and (max-width: 321px) {
-  .table > :not(caption) > * > * {
-    font-size: 7px;
   }
 }
