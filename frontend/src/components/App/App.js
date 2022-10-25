@@ -55,6 +55,7 @@ function App() {
 
   function onChoosePageHandler(page) {
     setPagesConfig({ ...pagesConfig, currentPage: page });
+    setIsNotSorted(true);
   }
 
   useEffect(() => {
