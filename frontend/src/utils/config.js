@@ -1,4 +1,4 @@
-export const TABLE_API_URL = 'https://welbex-testtask.herokuapp.com/';
+export const TABLE_API_URL = 'https://welbex-test-task.onrender.com';
 export const columns = [
     { label: "Дата", accessor: "date_of_birth", sortable: false },
     { label: "Название", accessor: "user_name", sortable: true, sortbyOrder: "desc" },
