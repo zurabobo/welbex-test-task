@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const knex = require('knex');
-const pg = require('pg')
+const pg = require('pg');
 
 
 const db = knex({
