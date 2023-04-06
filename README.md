@@ -1,5 +1,5 @@
 # [Проектная работа на Netlify](https://welbex-testtask.netlify.app/)
-# [Серверная часть на Hasura.io](https://welbex-testtask.herokuapp.com/)
+# [Серверная часть на Onrender.com](https://welbex-test-task.onrender.com)
 
 ## Инструкция по установке:
 
