@@ -4,15 +4,14 @@ const cors = require('cors');
 const knex = require('knex');
 const pg = require('pg');
 
-
+// const db = new pg.Client(process.env.DATABASE_URL);
+// db.connect();
+// const query = 'SELECT * FROM main';
+// db.query(qyery, (req,res) => {
+//     console.log(res)
+// })
 const db = knex({
     client: 'pg',
-    // connection: {
-    //     host : process.env.DATABASE_HOST,
-    // user : process.env.DATABASE_USERNAME,
-    // password : process.env.DATABASE_PASSWORD,
-    // database : process.env.DATABASE
-    //   },
     connection: {
         connectionString: process.env.DATABASE_URL,
         ssl: { rejectUnauthorized: false },
