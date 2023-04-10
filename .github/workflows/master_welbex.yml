@@ -53,4 +53,4 @@ jobs:
           app-name: 'welbex'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6F281E55901F40CFBABCFC0B54378F63 }}
-          package: .
+          package: ./backend
