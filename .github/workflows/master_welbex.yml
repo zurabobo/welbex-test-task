@@ -5,8 +5,6 @@ name: Build and deploy Node.js app to Azure Web App - welbex
 
 on:
   push:
-  paths:
-      - backend
     branches:
       - master
   workflow_dispatch:
@@ -40,7 +38,7 @@ jobs:
     needs: build
     environment:
       name: 'Production'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+      url: ${{ steps.deploy-to-webapp.outputs.backend }}
 
     steps:
       - name: Download artifact from build job
