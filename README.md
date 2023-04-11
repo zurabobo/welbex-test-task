@@ -1,5 +1,5 @@
 # [Проектная работа на Netlify](https://welbex-testtask.netlify.app/)
-# [Серверная часть на Onrender.com](https://welbex-test-task.onrender.com)
+# [Серверная часть на Azure](https://welbex.azurewebsites.net/)
 
 ## Инструкция по установке:
 
