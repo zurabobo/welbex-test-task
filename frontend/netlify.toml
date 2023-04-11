@@ -9,5 +9,5 @@
 
 [[redirects]]
 from = "/*"
-to = "https://welbex-testtask.herokuapp.com/:splat"
+to = "https://welbex.azurewebsites.net/:splat"
 status = 200
